@@ -14,8 +14,8 @@ class Bookstore:
 
     def search_book(self, title):
         for book in self.books:
-            # Introducing a bug by using '==' instead of 'in'
-            if book.title == title:  # Bug: Search only exact title match
+            # Corrected bug: Use 'in' to search for partial match in title
+            if book.title in title:  # Bug: Search only exact title match
                 return book
         return None
 
